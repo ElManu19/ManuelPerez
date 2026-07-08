@@ -1,0 +1,842 @@
+/* ========================= */
+/* RESET */
+/* ========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+:root{
+
+    --vino:#8B1E3F;
+    --vino-hover:#A1264B;
+
+    --fondo:#111111;
+    --fondo2:#1B1B1B;
+
+    --texto:#F2F2F2;
+    --texto2:#C9C9C9;
+
+}
+
+
+
+/* ========================= */
+/* BODY */
+/* ========================= */
+
+body{
+
+    font-family:'Poppins', sans-serif;
+
+    background:var(--fondo);
+
+    color:var(--texto);
+
+}
+
+
+
+/* ========================= */
+/* HEADER */
+/* ========================= */
+
+header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    background:rgba(17,17,17,.92);
+
+    backdrop-filter:blur(8px);
+
+    border-bottom:1px solid rgba(255,255,255,.05);
+
+}
+
+
+
+nav{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    height:75px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+
+nav h2{
+
+    color:var(--vino);
+
+    font-size:24px;
+
+}
+
+
+
+nav ul{
+
+    display:flex;
+
+    gap:30px;
+
+    list-style:none;
+
+}
+
+
+
+nav a{
+
+    text-decoration:none;
+
+    color:var(--texto);
+
+    transition:.25s;
+
+}
+
+
+
+nav a:hover{
+
+    color:var(--vino);
+
+}
+
+
+
+/* ========================= */
+/* SECCIONES */
+/* ========================= */
+
+section{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    padding:90px 0;
+
+}
+
+
+
+.subtitulo{
+
+    color:var(--texto2);
+
+    margin-top:15px;
+
+    margin-bottom:45px;
+
+    max-width:750px;
+
+    line-height:1.7;
+
+}
+
+
+
+/* ========================= */
+/* HERO */
+/* ========================= */
+
+.hero{
+
+    max-width:800px;
+
+}
+
+
+
+.hero h1{
+
+    font-size:60px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.hero h2{
+
+    color:var(--vino);
+
+    margin-bottom:25px;
+
+    font-size:28px;
+
+}
+
+
+
+.hero p{
+
+    line-height:1.8;
+
+    color:var(--texto2);
+
+    font-size:18px;
+
+}
+
+
+
+/* ========================= */
+/* PROYECTOS */
+/* ========================= */
+
+#contenedorProyectos{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+
+    gap:35px;
+
+}
+
+
+
+/* Las tarjetas se crearán con JavaScript */
+
+
+
+/* ========================= */
+/* TECNOLOGÍAS */
+/* ========================= */
+
+#contenedorTecnologias{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+
+
+/* También se crearán con JavaScript */
+
+
+
+/* ========================= */
+/* SOBRE MÍ */
+/* ========================= */
+
+#sobre-mi p{
+
+    color:var(--texto2);
+
+    line-height:1.9;
+
+    max-width:900px;
+    
+
+}
+
+
+
+/* ========================= */
+/* CONTACTO */
+/* ========================= */
+
+#contacto{
+
+    padding-bottom:120px;
+
+}
+
+
+
+/* ========================= */
+/* MODAL */
+/* ========================= */
+
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.75);
+
+    z-index:2000;
+
+}
+
+
+
+.modal-contenido{
+
+    width:90%;
+
+    max-width:950px;
+
+    background:var(--fondo2);
+
+    border-radius:18px;
+
+    padding:35px;
+
+}
+
+
+
+.oculto{
+
+    display:none;
+
+}
+.card-proyecto{
+
+    background:#1b1b1b;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    transition:.3s;
+
+}
+
+
+.card-proyecto.completado{
+
+    cursor:pointer;
+
+}
+
+
+.card-proyecto.completado:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--vino);
+
+    box-shadow:
+    0 20px 45px rgba(139,30,63,.25);
+
+}
+
+
+.card-proyecto.desarrollo{
+
+    opacity:.65;
+
+    cursor:not-allowed;
+
+}
+
+
+.categoria-proyecto{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:var(--vino);
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+
+.categoria-proyecto span{
+
+    width:30px;
+
+    height:2px;
+
+    background:var(--vino);
+
+}
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.75);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:2000;
+
+}
+
+
+.modal-contenido{
+
+    width:90%;
+
+    max-width:700px;
+
+    background:#1b1b1b;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    position:relative;
+
+}
+
+
+.modal-contenido h2{
+
+    color:var(--vino);
+
+    margin-bottom:20px;
+
+}
+
+
+.modal-contenido p{
+
+    color:var(--texto2);
+
+    line-height:1.7;
+
+    margin-bottom:20px;
+
+}
+
+
+.cerrar-modal{
+
+    position:absolute;
+
+    right:20px;
+
+    top:15px;
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+}
+
+
+.oculto{
+
+    display:none;
+
+}
+.galeria-proyecto{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+
+    margin:25px 0;
+
+}
+
+
+.galeria-proyecto img{
+
+    width:100%;
+
+    border-radius:12px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+.imagen-principal-container{
+
+    width:100%;
+
+    margin:25px 0;
+
+}
+
+
+.imagen-principal-container img{
+
+    width:100%;
+
+    max-height:450px;
+
+    object-fit:contain;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+}
+
+
+
+.miniaturas{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-bottom:30px;
+
+    overflow-x:auto;
+
+}
+
+
+
+.miniatura{
+
+    width:120px;
+
+    height:80px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    opacity:.7;
+
+    transition:.3s;
+
+}
+
+
+
+.miniatura:hover{
+
+    opacity:1;
+
+    transform:scale(1.05);
+
+}
+
+
+
+.visor-imagen{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.9);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:3000;
+
+    cursor:pointer;
+
+}
+
+
+
+.visor-imagen img{
+
+    max-width:90%;
+
+    max-height:90%;
+
+    border-radius:15px;
+
+}
+/* =========================================
+   TECNOLOGIAS
+========================================= */
+
+
+.tecnologias{
+
+    padding:80px 0;
+
+}
+
+
+
+.titulo-seccion{
+
+    text-align:center;
+
+    margin-bottom:45px;
+
+}
+
+
+.titulo-seccion h2{
+
+    font-size:38px;
+
+    color:white;
+
+    margin-bottom:15px;
+
+}
+
+
+.titulo-seccion p{
+
+    color:var(--texto2);
+
+    max-width:650px;
+
+    margin:auto;
+
+    line-height:1.6;
+
+}
+
+
+
+.contenedor-tecnologias{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+
+
+.tarjeta-tecnologia{
+
+    background:#1b1b1b;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    transition:.3s;
+
+}
+
+
+
+.tarjeta-tecnologia:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--vino);
+
+    box-shadow:
+    0 15px 35px rgba(139,30,63,.20);
+
+}
+
+
+
+.tarjeta-tecnologia h3{
+
+    color:var(--vino);
+
+    margin-bottom:18px;
+
+    font-size:22px;
+
+}
+
+
+
+.tarjeta-tecnologia p{
+
+    color:var(--texto2);
+
+    line-height:1.8;
+
+    font-size:15px;
+
+}
+
+
+
+
+@media(max-width:900px){
+
+
+    .contenedor-tecnologias{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+
+}
+
+
+
+@media(max-width:600px){
+
+
+    .contenedor-tecnologias{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+}
+/* =========================================
+   CONTACTO
+========================================= */
+
+
+.contacto{
+
+    padding:80px 0;
+
+}
+
+
+
+.contenedor-contacto{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.tarjeta-contacto{
+
+    background:#1b1b1b;
+
+    width:300px;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+
+
+.tarjeta-contacto:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--vino);
+
+    box-shadow:
+    0 15px 35px rgba(139,30,63,.20);
+
+}
+
+
+
+.tarjeta-contacto h3{
+
+    color:var(--vino);
+
+    margin-bottom:15px;
+
+    font-size:22px;
+
+}
+
+
+
+.tarjeta-contacto p{
+
+    color:var(--texto2);
+
+    font-size:16px;
+
+}
+
+
+
+.tarjeta-contacto a{
+
+    color:#4da3ff;
+
+    text-decoration:none;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+
+
+.tarjeta-contacto a:hover{
+
+    text-decoration:underline;
+
+    color:#80c4ff;
+
+}
+
+
+
